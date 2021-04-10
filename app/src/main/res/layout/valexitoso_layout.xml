@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_fondopop">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CL_PopUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/btmenu_fondopop"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btmenu_primartop"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:text="ESTADO DE LA TAREA"
+            android:textColor="@color/blanco_transparente"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="20dp"
+            android:text="Por favor seleccione el resultado de la tarea"
+            android:textColor="@color/grey_text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+
+        <TextView
+            android:id="@+id/btnNoExitoso"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/btmenu_primarc"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="6dp"
+            android:text="NO EXITOSA"
+            android:textColor="@color/blanco_transparente"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerNoExitoso"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta"
+            app:layout_constraintWidth_percent=".40" />
+
+
+        <TextView
+            android:id="@+id/btnExitoso"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/btmenu_primaraz"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="EXITOSA"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/btnNoExitoso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnNoExitoso"
+            app:layout_constraintWidth_percent=".40" />
+
+        <Spinner
+            android:id="@+id/spinnerNoExitoso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/et_ObservNoExit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/et_ObservNoExit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:ems="10"
+            android:hint="Por favor escriba una observación"
+            android:inputType="textMultiLine|text"
+            android:textColorHint="@color/azul_lista1"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/btnFinalizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/btnCancelar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/btmenu_primarc"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="6dp"
+            android:text="CANCELAR"
+            android:textColor="@color/blanco_transparente"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFinalizar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnFinalizar"
+            app:layout_constraintWidth_percent=".40" />
+
+        <TextView
+            android:id="@+id/btnFinalizar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/btmenu_primaraz"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="6dp"
+            android:text="ACEPTAR"
+            android:textColor="@color/blanco_transparente"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintWidth_percent=".40" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

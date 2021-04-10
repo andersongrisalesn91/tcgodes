@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.tcgokotlin.ModulHome.DriverHomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_driver_home" />
+    <fragment
+        android:id="@+id/navigation_map"
+        android:name="com.example.tcgokotlin.DriverTrackingFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_driver_tracking">
+        <action
+            android:id="@+id/action_navigation_map_to_formaFragment"
+            app:destination="@id/formaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_tasks"
+        android:name="com.example.tcgokotlin.ModulTasks.TasksFragment"
+        android:label="@string/tasks"
+        tools:layout="@layout/fragment_tasks">
+        <action
+            android:id="@+id/action_navigation_tasks_to_formaFragment"
+            app:destination="@id/formaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_Sinc"
+        android:name="com.example.tcgokotlin.Sincronizar.Sincronizar"
+        android:label="@string/Sync"
+        tools:layout="@layout/activity_sincronizar"></fragment>
+    <fragment
+        android:id="@+id/Fragment_Signature"
+        android:name="com.example.tcgokotlin.SignatureDialogFragment"
+        android:label="@string/Signature"
+        tools:layout="@layout/signature_pad">
+        <action
+            android:id="@+id/action_Fragment_Signature_to_formaFragment"
+            app:destination="@id/formaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_options"
+        android:name="com.example.tcgokotlin.OptionsFragment"
+        android:label="@string/options"
+        tools:layout="@layout/fragment_options">
+        <action
+            android:id="@+id/action_navigation_options_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.tcgokotlin.ModulOptions.EditProfileFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_edit_profile" />
+
+    <fragment
+        android:id="@+id/formaFragment"
+        android:name="com.example.tcgokotlin.Forms.Forma"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_forma">
+        <action
+            android:id="@+id/formaFragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/formaFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/formaFragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/formaFragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/formaFragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/formaFragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/formaFragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/formaFragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/formaFragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/formaFragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MenuFragment"
+        android:name="com.example.tcgokotlin.Forms.FormMenu"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_menu">
+        <action
+            android:id="@+id/MenuFragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/MenuFragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/MenuFragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/MenuFragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/MenuFragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/MenuFragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/MenuFragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/MenuFragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/MenuFragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/MenuFragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SubMenuFragment"
+        android:name="com.example.tcgokotlin.Forms.FormSubMenu"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_submenu">
+        <action
+            android:id="@+id/SubMenuFragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/SubMenuFragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/SubMenuFragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Tipo2Fragment"
+        android:name="com.example.tcgokotlin.Forms.FormTipo2"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo2">
+        <action
+            android:id="@+id/Tipo2Fragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/Tipo2Fragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Tipo3Fragment"
+        android:name="com.example.tcgokotlin.Forms.FormTipo3"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo3">
+        <action
+            android:id="@+id/Tipo3Fragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/Tipo3Fragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Tipo8Fragment"
+        android:name="com.example.tcgokotlin.Forms.FormTipo8"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo8">
+        <action
+            android:id="@+id/Tipo8Fragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/Tipo8Fragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Tipo9Fragment"
+        android:name="com.example.tcgokotlin.Forms.FormTipo9"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo9">
+        <action
+            android:id="@+id/Tipo9Fragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/Tipo9Fragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Tipo10Fragment"
+        android:name="com.example.tcgokotlin.Forms.FormTipo10"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo10">
+        <action
+            android:id="@+id/Tipo10Fragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/Tipo10Fragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Tipo11Fragment"
+        android:name="com.example.tcgokotlin.Forms.FormTipo11"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo11">
+        <action
+            android:id="@+id/Tipo11Fragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/Tipo11Fragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FotosFragment"
+        android:name="com.example.tcgokotlin.Forms.FormFotos"
+        android:label="@string/form_task"
+        tools:layout="@layout/activity_form_tipo8">
+        <action
+            android:id="@+id/FotosFragment_to_navigation_tasks"
+            app:destination="@id/navigation_tasks" />
+        <action
+            android:id="@+id/FotosFragment_to_formaFragment"
+            app:destination="@id/formaFragment" />
+        <action
+            android:id="@+id/FotosFragment_to_MenuFragment"
+            app:destination="@id/MenuFragment" />
+        <action
+            android:id="@+id/FotosFragment_to_SubMenuFragment"
+            app:destination="@id/SubMenuFragment" />
+        <action
+            android:id="@+id/FotosFragment_to_Tipo2Fragment"
+            app:destination="@id/Tipo2Fragment" />
+        <action
+            android:id="@+id/FotosFragment_to_Tipo3Fragment"
+            app:destination="@id/Tipo3Fragment" />
+        <action
+            android:id="@+id/FotosFragment_to_Tipo8Fragment"
+            app:destination="@id/Tipo8Fragment" />
+        <action
+            android:id="@+id/FotosFragment_to_Tipo9Fragment"
+            app:destination="@id/Tipo9Fragment" />
+        <action
+            android:id="@+id/FotosFragment_to_Tipo10Fragment"
+            app:destination="@id/Tipo10Fragment" />
+        <action
+            android:id="@+id/FotosFragment_to_Tipo11Fragment"
+            app:destination="@id/Tipo11Fragment" />
+        <action
+            android:id="@+id/FotosFragment_to_FotosFragment"
+            app:destination="@id/FotosFragment" />
+    </fragment>
+</navigation>

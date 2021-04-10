@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/RLCEspacios"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondoitem1"
+    android:paddingBottom="5dp">
+
+
+    <TextView
+        android:id="@+id/tvNombreContEspacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tvRtaCE"
+        android:gravity="center_vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="nombre de la categoria"
+        android:textColor="@color/blanco_transparente"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvRtaCE"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tvCant"
+        android:background="@drawable/btmenu"
+        android:inputType="number"
+        android:text="TIENE"
+        android:textAlignment="center"
+        android:textColor="@color/blanco_transparente"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/tvCant"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/textoborde"
+        android:hint="0"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="#FF24355E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

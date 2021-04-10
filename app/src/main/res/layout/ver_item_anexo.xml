@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginStart="2dp"
+    android:layout_marginTop="1dp"
+    android:layout_marginEnd="2dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CL_Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/btmenu_secundaryd"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="5dp"
+        android:paddingBottom="10dp">
+
+
+        <EditText
+            android:id="@+id/tv_req_text"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:cursorVisible="true"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical"
+            android:hint="Descripción"
+            android:inputType="textMultiLine"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/tv_req_cant"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical"
+            android:hint="Cantidad Req"
+            android:inputType="number"
+            android:numeric="integer"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="5dp"
+            android:phoneNumber="true"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/iv_req_foto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_req_text" />
+
+        <ImageView
+            android:id="@+id/iv_req_foto"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_req_cant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_req_text"
+            app:srcCompat="@drawable/ic_camera_alt_black_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

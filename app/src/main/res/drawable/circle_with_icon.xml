@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/item_circle"/>
+    <item android:drawable="@drawable/ic_near_tasks"
+        android:top="8dp"
+        android:bottom="8dp"
+        android:start="8dp"
+        android:end="8dp"/>
+</layer-list>

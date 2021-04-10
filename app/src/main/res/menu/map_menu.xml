@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_rute_time"
+        app:showAsAction="never"
+        android:title="@string/ruta_time">
+    </item>
+
+    <item
+        android:id="@+id/action_rute_distance"
+        app:showAsAction="never"
+        android:title="@string/rute_distance">
+    </item>
+
+    <item
+        android:id="@+id/action_rute_current"
+        app:showAsAction="never"
+        android:title="@string/rute_current">
+    </item>
+</menu>

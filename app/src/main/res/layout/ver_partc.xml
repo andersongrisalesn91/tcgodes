@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondoitem1"
+    android:paddingBottom="5dp">
+
+
+    <TextView
+        android:id="@+id/tvCodBar"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent"
+        android:textAlignment="center"
+        android:textColor="@color/blanco_transparente"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvNombreActivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvCodBar"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tvValTPartc"
+        android:layout_toEndOf="@+id/tvCodBar"
+        android:background="@android:color/transparent"
+        android:textAlignment="center"
+        android:textColor="@color/blanco_transparente"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/tvValTPartc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvCodBar"
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/tvValorNPartc"
+        android:background="@drawable/textoborde"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/tvValorNPartc"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvCodBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/textoborde"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+</RelativeLayout>

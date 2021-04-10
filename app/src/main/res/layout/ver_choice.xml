@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="4dp"
+    android:background="@drawable/btmenu_secundlight">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CL_formulario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/imgRBV"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/rdnoselb" />
+
+        <TextView
+            android:id="@+id/tvNombreOpcionRD"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignTop="@+id/imgRBV"
+            android:layout_alignBottom="@+id/imgRBV"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_toEndOf="@+id/imgRBV"
+            android:gravity="fill_horizontal|center_vertical"
+            android:hint="Opcion Choice"
+            android:paddingStart="5dp"
+            android:text="Garantía"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blanco_transparente"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgRBV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imgRBV"
+            app:layout_constraintTop_toTopOf="@+id/imgRBV"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

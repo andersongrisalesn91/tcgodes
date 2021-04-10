@@ -1,0 +1,788 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cl_form_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLine"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:scrollbarStyle="outsideOverlay"
+    app:layout_constraintWidth_percent=".40"
+    tools:context=".Forms.Forma">
+
+    <TextView
+        android:id="@+id/TVNPantalla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btmenu_primary"
+        android:fontFamily="@font/francois_one"
+        android:gravity="center_horizontal|center_vertical"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="8dp"
+        android:text="@string/title_form_menu"
+        android:textAlignment="center"
+        android:textColor="@color/blanco_transparente"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/SC_Forma"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TVNPantalla">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/CL_FormaPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_Encabezado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/TVNPantalla1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/francois_one"
+                    android:text="Descripcion : XXXXXXX"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/francois_one"
+                    android:paddingEnd="10dp"
+                    android:text="Identificación : XXXXXXX"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/TVNPantalla3"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVNPantalla1" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/francois_one"
+                    android:gravity="center_horizontal"
+                    android:text="Horario : XX:XX - XX:XX"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/TVNPantalla2" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/francois_one"
+                    android:paddingEnd="10dp"
+                    android:text="Telefonos: XXXXXXX - XXXXXXXXXX"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVNPantalla2"
+                    app:layout_constraintWidth_percent=".60" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/francois_one"
+                    android:gravity="center_horizontal"
+                    android:text="Nombre Completo Cliente"
+                    android:textAlignment="center"
+                    android:textAllCaps="true"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVNPantalla6"
+                    app:layout_constraintWidth_percent=".90" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/francois_one"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="Fotos : 0/40"
+                    android:textAlignment="viewEnd"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/TVNPantalla4"
+                    app:layout_constraintWidth_percent=".40" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/francois_one"
+                    android:gravity="center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="Estimado: 15"
+                    android:textAlignment="viewEnd"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/TVNPantalla6"
+                    app:layout_constraintWidth_percent=".37" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/francois_one"
+                    android:paddingEnd="5dp"
+                    android:text="Reparacion"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVNPantalla4"
+                    app:layout_constraintWidth_percent=".55" />
+
+                <TextView
+                    android:id="@+id/TVNPantalla9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/ic_star_gold_24dp"
+                    android:fontFamily="@font/francois_one"
+                    android:paddingEnd="5dp"
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/TVNPantalla8"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/TVNPantalla6"
+                    app:layout_constraintTop_toBottomOf="@+id/TVNPantalla4"
+                    app:layout_constraintWidth_percent=".08" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_Recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_Encabezado">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_items_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_Anexos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_Recycler">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/CL_ShowAnexos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvmarginstart"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/tv_Anexos"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/tv_Anexos"
+                        app:layout_constraintWidth_percent=".10" />
+
+                    <TextView
+                        android:id="@+id/tv_Anexos"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:hint="Observaciones Generales"
+                        android:paddingStart="2dp"
+                        android:paddingEnd="2dp"
+                        android:text="Anexos - Opcional:"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/bt_showhideanexos"
+                        app:layout_constraintStart_toEndOf="@+id/tvmarginstart"
+                        app:layout_constraintTop_toTopOf="@+id/bt_showhideanexos"
+                        app:layout_constraintWidth_percent=".40" />
+
+                    <TextView
+                        android:id="@+id/bt_showhideanexos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/btmenu_secundc"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="5dp"
+                        android:paddingBottom="6dp"
+                        android:text="MOSTRAR"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/tvmarginend"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".30" />
+
+                    <TextView
+                        android:id="@+id/tvmarginend"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:paddingStart="30dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="30dp"
+                        android:paddingBottom="12dp"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/bt_showhideanexos"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".10" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/CL_ItemsAnexos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/CL_ShowAnexos">
+
+
+                    <TextView
+                        android:id="@+id/tv_titulo_Anexo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/grayDark"
+                        android:textSize="12sp"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".50" />
+
+                    <TextView
+                        android:id="@+id/tv_titulo_Anexo2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:textColor="@color/grayDark"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintWidth_percent=".50" />
+
+                    <ImageView
+                        android:id="@+id/marginstart"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="30dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="30dp"
+                        android:paddingBottom="12dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_titulo_Anexo1"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintWidth_percent=".125" />
+
+                    <ImageView
+                        android:id="@+id/bt_Anexo1"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/anexo_black"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="30dp"
+                        android:paddingTop="12dp"
+                        android:paddingEnd="30dp"
+                        android:paddingBottom="12dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/marginstart"
+                        app:layout_constraintTop_toTopOf="@+id/marginstart"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintWidth_percent=".25" />
+
+
+                    <ImageView
+                        android:id="@+id/bt_Anexo2"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/anexo_black"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/blanco_transparente"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/marginend"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_titulo_Anexo2"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintWidth_percent=".25" />
+
+                    <ImageView
+                        android:id="@+id/marginend"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:paddingStart="5dp"
+                        android:textColor="@color/blanco_transparente"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/bt_Anexo2"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:layout_constraintWidth_percent=".125" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_Observaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_Anexos">
+
+                <EditText
+                    android:id="@+id/tv_Observacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:hint="Observaciones Generales"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayDark"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_Autoriza"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_Observaciones">
+
+                <TextView
+                    android:id="@+id/TV_Titulo_Autoriza"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Autoriza el tratamiento de sus datos personales:"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvAutorizaSI"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="44dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/btmenu_primaryri"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/AuthSi"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TV_Titulo_Autoriza"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:layout_constraintWidth_percent=".40" />
+
+                <TextView
+                    android:id="@+id/tvAutorizaNO"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/btmenu_secundaryrd"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingStart="5dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/AuthNo"
+                    android:textColor="@color/blanco_transparente"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvAutorizaSI"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/tvAutorizaSI"
+                    app:layout_constraintTop_toTopOf="@+id/tvAutorizaSI"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintWidth_percent=".40" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_NombreCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_Autoriza">
+
+                <EditText
+                    android:id="@+id/tv_NombreCliente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Nombre Cliente"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayDark"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_Identificacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/CL_FirmaCliente"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_NombreCliente">
+
+                <EditText
+                    android:id="@+id/tv_Identificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="8dp"
+                    android:hint="Identificación Cliente"
+                    android:textAlignment="center"
+                    android:textColor="@color/grayDark"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_FirmaCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_Identificacion">
+
+
+                <TextView
+                    android:id="@+id/TVTituloF"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="FIRMA DEL CLIENTE"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/IVFirmaCliente"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btmenu_firmas"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingStart="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="3dp"
+                    android:paddingBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVTituloF"
+                    app:layout_constraintWidth_percent=".70" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_FirmaUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_FirmaCliente">
+
+
+                <TextView
+                    android:id="@+id/TVTituloFU"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="FIRMA DEL USUARIO DE CAMPO"
+                    android:textAlignment="center"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/IVFirmaUsuario"
+                    android:layout_width="0dp"
+                    android:layout_height="180dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/btmenu_firmas"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingStart="3dp"
+                    android:paddingTop="3dp"
+                    android:paddingEnd="3dp"
+                    android:paddingBottom="3dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/TVTituloFU"
+                    app:layout_constraintWidth_percent=".70" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CL_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/CL_FirmaUsuario">
+
+                <TextView
+                    android:id="@+id/tvmarginstart2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/buttonStanBy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".10" />
+
+                <TextView
+                    android:id="@+id/buttonStanBy"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/btmenu_secundc"
+                    android:gravity="center_horizontal"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="STAND BY"
+                    android:textColor="@color/grayDark"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvmarginstart2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintWidth_percent=".35" />
+
+                <TextView
+                    android:id="@+id/buttonIrMenu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/btmenu_primarc"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="8dp"
+                    android:text="FINALIZAR"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/buttonStanBy"
+                    app:layout_constraintEnd_toStartOf="@+id/tvmarginend2"
+                    app:layout_constraintTop_toTopOf="@+id/buttonStanBy"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintWidth_percent=".35" />
+
+                <TextView
+                    android:id="@+id/tvmarginend2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="30dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="12dp"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent=".10" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

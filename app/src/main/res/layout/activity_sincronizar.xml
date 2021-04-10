@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    tools:context=".Sincronizar.Sincronizar">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/BarraPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scaleType="centerInside"
+            android:text="SINCRONIZAR TAREAS"
+            android:textColor="@color/blanco_transparente"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tVNTSINC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/aclonica"
+            android:hint="Nombre de Tabla a sincronizar"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/progressBarTT" />
+
+        <TextView
+            android:id="@+id/tVPorcSinc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/aclonica"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tVNTSINC"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/tVNTSINC"
+            app:layout_constraintTop_toBottomOf="@+id/tVNTSINC" />
+
+        <TextView
+            android:id="@+id/tVTotalSS2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/aclonica"
+            android:text="F Realizadas:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tVTotalSS3" />
+
+        <TextView
+            android:id="@+id/tVTotalFCN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tVTotalSS2"
+            app:layout_constraintStart_toStartOf="@+id/tVTotalSS2"
+            app:layout_constraintTop_toBottomOf="@+id/tVTotalSS3" />
+
+        <TextView
+            android:id="@+id/tVTotalSS3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/aclonica"
+            android:text="F Pendientes:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBarTF" />
+
+        <TextView
+            android:id="@+id/tVTotalFSSN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tVTotalSS3"
+            app:layout_constraintStart_toStartOf="@+id/tVTotalSS3"
+            app:layout_constraintTop_toBottomOf="@+id/tVTotalSS3" />
+
+        <Button
+            android:id="@+id/buttonSincronizar2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/btmenu_primary"
+            android:fontFamily="@font/francois_one"
+            android:text="Sincronizar datos"
+            android:textAlignment="center"
+            android:textColor="@color/blanco_transparente"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/BarraPrincipal" />
+
+        <Button
+            android:id="@+id/buttonSincronizar3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/btmenu_primary"
+            android:fontFamily="@font/francois_one"
+            android:text="Sincronizar fotos"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tVPorcSinc" />
+
+        <TextView
+            android:id="@+id/tVTotalSS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Pendientes:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSincronizar2" />
+
+        <TextView
+            android:id="@+id/tVTotalSS4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/aclonica"
+            android:text="Realizadas:"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tVTotalSS" />
+
+        <TextView
+            android:id="@+id/tVTotalSSN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/aclonica"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tVTotalSS"
+            app:layout_constraintStart_toStartOf="@+id/tVTotalSS"
+            app:layout_constraintTop_toBottomOf="@+id/tVTotalSS" />
+
+        <TextView
+            android:id="@+id/tVTotalFN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aclonica"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tVTotalSS4"
+            app:layout_constraintStart_toStartOf="@+id/tVTotalSS4"
+            app:layout_constraintTop_toTopOf="@+id/tVTotalSSN" />
+
+        <ProgressBar
+            android:id="@+id/progressBarTF"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:minWidth="200dp"
+            android:minHeight="50dp"
+            android:progress="1"
+            app:layout_constraintEnd_toStartOf="@+id/ivFotosSinc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSincronizar3" />
+
+        <ProgressBar
+            android:id="@+id/progressBarTT"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="30dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:minWidth="200dp"
+            android:minHeight="50dp"
+            android:progress="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tVTotalSSN" />
+
+        <ImageView
+            android:id="@+id/ivFotosSinc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/fondoindicador"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/progressBarTF"
+            app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+        <Button
+            android:id="@+id/buttonEliminarBK"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/btmenu_primary"
+            android:fontFamily="@font/francois_one"
+            android:text="Eliminar Backups Antiguos"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tVTotalFCN" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,23 @@
+package com.example.tcgokotlin.data.model
+
+class History(var dateServ: String,
+              var date: String,
+              var exitosa: String,
+              var motivReag: String,
+              var active: String,
+              var motivoNoEx: String,
+              var recHoraFin: String,
+              var recHoraIn: String,
+              var recKmEst: String,
+              var recKmReal: String,
+              var recTiempoEst: String?,
+              var recTiempoReal: String?,
+              var tareaHoraFin: String?,
+              var tareaHoraIn: String?,
+              var tareaRangoFin: String?,
+              var tareaRangoIn: String?,
+              var tareaTiempoEst: String?,
+              var tareaTiempoReal: String?,
+              var img: String,
+              var historyNote: historyNote,
+              var tipNov: String?)

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btmenu_secundlight">
+
+    <ImageView
+        android:id="@+id/imgCBV"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:srcCompat="@drawable/uncheck" />
+
+    <TextView
+        android:id="@+id/tvNombreOpcion"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/imgCBV"
+        android:layout_alignBottom="@+id/imgCBV"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_toEndOf="@+id/imgCBV"
+        android:hint="Opcion Chek"
+        android:paddingStart="5dp"
+        android:textColor="@color/grayDark"
+        android:textColorHint="@color/grayDark"
+        android:textSize="18sp" />
+
+</RelativeLayout>
